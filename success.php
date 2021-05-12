@@ -21,24 +21,25 @@
     }
 ?>
 
-
-<div class="card " style="width: 18rem;">
-    <div class="card-body ">
-        <h5 class="card-title"><?php echo $_POST['firstname'] . ' ' . $_POST['lastname']; ?></h5>
-        <h6 class="card-subtitle mb-2 text-muted">
-            <?php echo $_POST['specialty']; ?>
-        </h6>
-        <p class="card-text">
-            Fecha de nacimiento: <?php echo $_POST['dob']?>
-        </p>
-        <p class="card-text">
-            Correo Electrónico: <?php echo $_POST['email']?>
-        </p>
-        <p class="card-text">
-            Télefono contacto: <?php echo $_POST['phone']?>
-        </p>
+<div class="container mt-5">
+    <div class="card " style="width: 18rem;">
+        <div class="card-body ">
+            <h5 class="card-title"><?php echo $_POST['firstname'] . ' ' . $_POST['lastname']; ?></h5>
+            <h6 class="card-subtitle mb-2 text-muted">
+                <?php echo $_POST['specialty']; ?>
+            </h6>
+            <p class="card-text">
+                Fecha de nacimiento: <?php echo $_POST['dob']?>
+            </p>
+            <p class="card-text">
+                Correo Electrónico: <?php echo $_POST['email']?>
+            </p>
+            <p class="card-text">
+                Télefono contacto: <?php echo $_POST['phone']?>
+            </p>
+        </div>
     </div>
 </div>
 
-<br><br><br><br><br>
+<br><br><br>
 <?php require_once 'includes/footer.php'; ?>
