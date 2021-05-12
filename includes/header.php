@@ -13,7 +13,7 @@
 
     <link rel="stylesheet" href="css/site.css">
 
-    <title>REG APP - <?php echo $title ?></title>
+    <title>Grupo Dehl - <?php echo $title ?></title>
   </head>
   <body>
     <div id="#topheader" class="container">
