@@ -11,7 +11,7 @@
             $email->addContent("text/plain", $content);
             //$email->addContent("text/html", $content);
 
-            $sendgrid = new \SendGrid(getenv('SENDGRID_API_KEY'));
+            $sendgrid = new \SendGrid(getenv('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'));
 
             try {
                 $response = $sendgrid->send($email);
