@@ -1,8 +1,10 @@
 <?php
     require 'vendor/autoload.php';
+    $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+    $dotenv->load();
     class SendEmail {
         public static function SendMail($to, $subject,$content){
-            //$key = "";
+            $key = $_ENV['SENDGRID_API_KEY'];
 
             $email = new \SendGrid\Mail\Mail();
             $email->setFrom("info@grupodehl.com", "Grupo Dehl");
@@ -11,7 +13,7 @@
             $email->addContent("text/plain", $content);
             //$email->addContent("text/html", $content);
 
-            $sendgrid = new \SendGrid('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');
+            $sendgrid = new \SendGrid($key);
 
             try {
                 $response = $sendgrid->send($email);

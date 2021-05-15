@@ -1,5 +1,5 @@
 <?php
-    $title = 'Grupo Dehl - Registro exitoso';
+    $title = 'Registro exitoso';
     require_once 'includes/header.php';
     require_once 'db/conn.php';
     require_once 'sendemail.php';
