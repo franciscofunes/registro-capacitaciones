@@ -16,7 +16,7 @@
         $specialtyName = $crud->getSpecialtyById($specialty);
 
         if($isSuccess) {
-            SendEmail::SendMail($email, 'Grupo Dehl - Registro de capacitación','Tu registro ha sido exitoso! no olvides seguirnos en nuestras redes sociales, https://instragram.com/grupodehl');
+            SendEmail::SendMail($email, 'Grupo Dehl - Registro de capacitación','Tu registro ha sido exitoso! no olvides seguirnos en nuestras redes sociales');
             include 'includes/successmessage.php';
         } else {
             include 'includes/errormessage.php';

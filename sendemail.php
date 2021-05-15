@@ -5,19 +5,19 @@
             //$key = "";
 
             $email = new \SendGrid\Mail\Mail();
-            $email->setFrom("ffunes90@gmail.com","Grupo Dehl");
+            $email->setFrom("info@grupodehl.com", "Grupo Dehl");
             $email->setSubject($subject);
             $email->addTo($to);
             $email->addContent("text/plain", $content);
             //$email->addContent("text/html", $content);
 
-            $sendgrid = new \SendGrid('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');
+            $sendgrid = new \SendGrid('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');
 
             try {
                 $response = $sendgrid->send($email);
-                print $response->statusCode() . "\n";
-                print_r($response->headers());
-                print $response->body() . "\n";
+                //print $response->statusCode() . "\n";
+                //print_r($response->headers());
+                //print $response->body() . "\n";
                 return $response;
             }catch(Exception $e){
                 echo "Excepción email atrapada: ". $e->getMessage(). "\n";
