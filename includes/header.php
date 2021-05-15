@@ -1,3 +1,8 @@
+<?php
+//this include the session file. This file contains code that starts/resumes a session.
+//By having it in the header file. it will be included on every page in the app, allowing session capability to be used on every page across the website
+include_once 'includes/session.php';
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -23,13 +28,23 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav" id="navbarNav">
-            <a  class="nav-link"  href="index.php">Inicio <span class="sr-only">(current)</span></a>
+          <div class="navbar-nav mr-auto" id="navbarNav">
+            <a  class="nav-link active"  href="index.php">Inicio <span class="sr-only">(current)</span></a>
             <a  class="nav-link"  href="viewrecords.php">Registros</a>
             <a  class="nav-link" target="_blank" href="https://www.grupodehl.com/curso">Capacitaciones</a>
             <a  class="nav-link" target="_blank" href="https://www.grupodehl.com/servicios">Servicios</a>
             <a  class="nav-link" target="_blank" href="https://www.grupodehl.com/cotizador-online">Cotizador</a>
             <a id="btn1" class="nav-link" target="_blank" href="https://www.grupodehl.com/contacto">Contacto</a>
+          </div>
+          <div class="navbar-nav ml-auto" id="navbarNav">
+          <?php
+            if(!isset($_SESSION['userid'])){            
+          ?>
+                <a  class="nav-link"  href="login.php">Ingresá<span class="sr-only">(current)</span></a>
+            <?php } else { ?>
+                <a href="" class="nav-item nav-link"><span>Hola  <?php echo $_SESSION['username']?> 👋</span><span class="sr-only">(current)</span></a>
+                <a  class="nav-item nav-link active"  href="logout.php">Salir<span class="sr-only">(current)</span></a>
+            <?php } ?>
           </div>
         </div>
       </nav>
