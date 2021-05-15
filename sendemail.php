@@ -2,19 +2,22 @@
     require 'vendor/autoload.php';
     class SendEmail {
         public static function SendMail($to, $subject,$content){
-            $key = "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";
+            //$key = "";
 
             $email = new \SendGrid\Mail\Mail();
-            $email->setFrom("ffunes90@gmail.com","Grupo Dehl - Registro exitoso");
+            $email->setFrom("info@grupodehl.com","Grupo Dehl");
             $email->setSubject($subject);
             $email->addTo($to);
             $email->addContent("text/plain", $content);
             //$email->addContent("text/html", $content);
 
-            $sendgrid = new \SendGrid($key);
+            $sendgrid = new \SendGrid(getenv('SENDGRID_API_KEY'));
 
             try {
                 $response = $sendgrid->send($email);
+                print $response->statusCode() . "\n";
+                print_r($response->headers());
+                print $response->body() . "\n";
                 return $response;
             }catch(Exception $e){
                 echo "Excepción email atrapada: ". $e->getMessage(). "\n";
