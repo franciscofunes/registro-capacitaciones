@@ -2,7 +2,7 @@
     require 'vendor/autoload.php';
     class SendEmail {
         public static function SendMail($to, $subject,$content){
-            $key = "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";
+            $key = "";
 
             $email = new \SendGrid\Mail\Mail();
             $email->setFrom("ffunes90@gmail.com","Grupo Dehl - Registro exitoso");
