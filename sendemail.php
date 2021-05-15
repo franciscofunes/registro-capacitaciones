@@ -5,7 +5,7 @@
             //$key = "";
 
             $email = new \SendGrid\Mail\Mail();
-            $email->setFrom("info@grupodehl.com","Grupo Dehl");
+            $email->setFrom("ffunes90@gmail.com","Grupo Dehl");
             $email->setSubject($subject);
             $email->addTo($to);
             $email->addContent("text/plain", $content);
