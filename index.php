@@ -9,7 +9,7 @@
     <div class="container">
         <h1 class="text-center mt-5">Registro de Capacitación </h1>
     </div>
-    <form method="post" action="success.php">
+    <form method="post" action="success.php" enctype="multipart/form-data">
         <div class="form-group">
             <label for="firstname">Nombre</label>
             <input required type="text" class="form-control" id="firstname" name="firstname">
@@ -40,7 +40,13 @@
             <input required type="text" class="form-control" id="phone" aria-describedby="phoneHelp" name="phone">
             <small id="phoneHelp" class="form-text text-muted">Nunca compartiremos tu télefono con ninguna otra persona u entidad.</small>
         </div>
-        <button type="submit" name="submit" class="btn btn-primary">Enviar</button>
+        <div class="custom-file">
+            <input type="file" accept="image/" class="custom-file-input" id="avatar" name="avatar">  
+            <label class="custom-file-label" for="avatar">Elegir archivo... </label>
+            <small id="avatar" class="form-text text-danger">Subir una imagen es opcional</small>      
+        </div>
+        
+        <button type="submit" name="submit" class="btn btn btn-primary btn-block mt-2">Enviar</button>
     </form>
 </div>
 <br><br><br><br><br>

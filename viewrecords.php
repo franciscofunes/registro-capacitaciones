@@ -24,17 +24,17 @@
         <?php while($r = $results->fetch(PDO::FETCH_ASSOC)) { ?>
                 <tbody>     
                     <tr>
-                        <td><?php echo $r['attendee_id']?></td>
-                        <td><?php echo $r['firstname']?></td>
-                        <td><?php echo $r['lastname']?></td>
-                        <td><?php echo $r['dateofbirth']?></td>
-                        <td><?php echo $r['emailaddress']?></td>
-                        <td><?php echo $r['name']?></td>
+                        <td class="align-middle"><?php echo $r['attendee_id']?></td>
+                        <td class="align-middle"><?php echo $r['firstname']?></td>
+                        <td class="align-middle"><?php echo $r['lastname']?></td>
+                        <td class="align-middle"><?php echo $r['dateofbirth']?></td>
+                        <td class="align-middle"><?php echo $r['emailaddress']?></td>
+                        <td class="align-middle"><?php echo $r['name']?></td>
                         <td>
-                            <a href="view.php?id=<?php echo $r['attendee_id']?>" class="btn btn-primary">Ver</a>
-                            <a href="edit.php?id=<?php echo $r['attendee_id']?>" class="btn btn-warning">Editar</a>
+                            <a href="view.php?id=<?php echo $r['attendee_id']?>" class="btn btn-primary btn-block">Ver</a>
+                            <a href="edit.php?id=<?php echo $r['attendee_id']?>" class="btn btn-warning btn-block">Editar</a>
                             <a onclick="return confirm('¿Está seguro de eliminar este registro?');"
-                            href="delete.php?id=<?php echo $r['attendee_id']?>" class="btn btn-danger">Eliminar</a>
+                            href="delete.php?id=<?php echo $r['attendee_id']?>" class="btn btn-danger btn-block">Eliminar</a>
                         </td>
                     </tr>
                 </tbody>

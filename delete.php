@@ -6,7 +6,7 @@
         header("Location: viewrecords.php");
     } else {
         //get ID VALUES
-        $id = $_GET;
+        $id = $_GET['id'];
         //call Delete function
         $result = $crud->deleteAttendee($id);
         //redirect to list

@@ -16,7 +16,9 @@
 ?>
 
 <div class="container mt-5">
+<img src="<?php echo empty($result['avatar_path']) ? "uploads/blank.png" : $result['avatar_path'] ; ?>" alt="avatar user image" class ="rounded-circle" style="width: 15%; height:15%;"/>
     <div class="card" style="width: 18rem;">
+    
         <div class="card-body ">
             <h5 class="card-title"><?php echo $result['firstname'] . ' ' . $result['lastname']; ?></h5>
             <h6 class="card-subtitle mb-2 text-muted">
@@ -35,7 +37,7 @@
     </div>
     <br>
             <a href="viewrecords.php" class="btn btn-info">Volver</a>
-            <a href="edit.php?id=<?php echo $result['attendee_id']?>" class="btn btn-warning">Editar</a>
+            <a href="edit.php?id=<?php echo $result['attendee_id']?>" class="btn btn-warning ">Editar</a>
             <a onclick="return confirm('¿Está seguro de eliminar este registro?');"
             href="delete.php?id=<?php echo $result['attendee_id']?>" class="btn btn-danger">Eliminar</a>
     <br>        
